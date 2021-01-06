@@ -27,12 +27,11 @@ from plugins.rename_file import rename_doc
 
 @Client.on_message(filters.command(["help"]))
 def help_user(bot, update):
-    uname = Config.UNAME
     
     bot.send_message(
         chat_id=update.chat.id,
         text=script.HELP_USER,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⭕️ Contact DEV ⭕️", url="https://t.me/{uname}")]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⭕️ Contact DEV ⭕️", url="https://t.me/AID_3N")]]),
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
@@ -42,12 +41,12 @@ def help_user(bot, update):
 @Client.on_message(filters.command(["start"]))
 def send_start(bot, update):
     # logger.info(update)
-    update_channel = Config.UPDATE_CHANNEL
+   
     
     bot.send_message(
         chat_id=update.chat.id,
         text=script.START_TEXT.format(update.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="JOIN UPDATES CHANNEL", url="https://t.me/{update_channel}")]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="JOIN UPDATES CHANNEL", url="https://t.me/TELEGRAM")]]),
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
