@@ -50,12 +50,6 @@ def send_start(bot, update):
         reply_to_message_id=update.message_id
     )
 
-        parse_mode="html",
-        disable_web_page_preview=True,
-        reply_to_message_id=update.message_id
-    )
-
-
 @Client.on_message(filters.command(["upgrade"]))
 def upgrade(bot, update):
     # logger.info(update)
