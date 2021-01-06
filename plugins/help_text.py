@@ -30,7 +30,7 @@ def help_user(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
         text=script.HELP_USER,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⭕️ Contact DEV ⭕️", url="https://t.me/prgofficial")]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⭕️ Contact DEV ⭕️", url="https://t.me/{uname}")]]),
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
@@ -44,6 +44,12 @@ def send_start(bot, update):
     bot.send_message(
         chat_id=update.chat.id,
         text=script.START_TEXT.format(update.from_user.first_name),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="JOIN UPDATES CHANNEL", url="https://t.me/{update_channel}")]]),
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+
         parse_mode="html",
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
