@@ -28,3 +28,8 @@ class Config(object):
     # Database url
     DB_URI = os.environ.get("DATABASE_URL", "")
 
+    #Your Channel Username Without @
+    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
+    
+    #Your Username Without @
+    UNAME = os.environ.get("UNAME", "")
